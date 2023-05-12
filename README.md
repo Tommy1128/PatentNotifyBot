@@ -2,15 +2,21 @@
 
     get_patents()
 
-* ### Description
-  * get patents
+<dd> 
+  get patents 
+  
+  ---
 
-* ### Parameters
-  * abc
-  * abc
+### Parameters
+  <dl>
+    <ul><li> abc
+  </dl>
 
-* ### Returns
-  * abc
+### Returns
+  <dl>
+    <ul><li> abc
+  </dl>
+</dd>
 
 # Database
 
