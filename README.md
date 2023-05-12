@@ -1,11 +1,16 @@
 # Web Crawler
+
     get_patents()
 
-&nbsp;&nbsp;&nbsp;&nbsp;get parents
+* ### Description
+  * get patents
 
->### Parameters
-* abc
-* abc
+* ### Parameters
+  * abc
+  * abc
+
+* ### Returns
+  * abc
 
 # Database
 
