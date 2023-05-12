@@ -6,17 +6,18 @@
 <dd> 
   get patents 
   
-  ---
-
-### Parameters
-  <!-- <dl>
+  <dl>
+  
+  ### Parameters
+  <dd>
     <ul><li> abc
-  </dl> -->
+  </dd>
 
-### Returns
-  <!-- <dl>
+  ### Returns
+  <dd>
     <ul><li> abc
-  </dl> -->
+  </dd>
+  </dl>
 </dd>
 </dl>
 
