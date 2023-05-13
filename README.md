@@ -3,8 +3,10 @@
 <dl><dd><dl><dd><dl> 
 
 ### Patent
+CLASS `Patent()`{:.py}
+
 ``` py
-    CLASS get_patents(*, date_from, date_to = today(), IPC = ..., limit = 50)
+    CLASS Patent(pid, title, date, IPC, image_url, content)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
@@ -13,7 +15,7 @@
     <dl>
         <dt> Attributes </dt>
         <dd><ul>
-            <li><b>id</b> (str) :&ensp; Publication number.
+            <li><b>pid</b> (str) :&ensp; Publication number.
             <li><b>title</b> (str) :&ensp; Title.
             <li><b>date</b> (str) :&ensp; Publication date.
             <li><b>IPC</b> (str[ ]) :&ensp; IPC.
