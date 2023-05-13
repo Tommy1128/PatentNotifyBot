@@ -5,20 +5,16 @@
 <dl><dd><dl><dd><dl> 
 <dt>
 
-```
-get_patents(from, to)
-```
+    get_patents(from, to)
 </dt>
 <dd><dl><dd><dl><dd> 
   取得指定日期範圍內的專利
   <dl>
- 
-  <dt> Parameters</dt>
+  <dt> Parameters </dt>
   <dd>
     <ul><li> abc
   </dd>
-
-  ### Returns
+  <dt> Returns </dt>
   <dd>
     <ul><li> abc
   </dd>
@@ -32,20 +28,18 @@ get_patents(from, to)
 <dl><dd><dl><dd><dl> 
 <dt>
 
-```
-get_patents(from, to)
-```
+    get_patents(from, to)
 </dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
  
-  ### Parameters
+  <dt> Parameters </dt>
   <dd>
     <ul><li> abc
   </dd>
 
-  ### Returns
+  <dt> Returns </dt>
   <dd>
     <ul><li> abc
   </dd>
@@ -58,20 +52,18 @@ get_patents(from, to)
 <dl><dd><dl><dd><dl> 
 <dt>
 
-```
-get_patents(from, to)
-```
+    get_patents(from, to)
 </dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
  
-  ### Parameters
+  <dt> Parameters </dt>
   <dd>
     <ul><li> abc
   </dd>
 
-  ### Returns
+  <dt> Returns </dt>
   <dd>
     <ul><li> abc
   </dd>
@@ -81,20 +73,18 @@ get_patents(from, to)
 ---
 <dt>
 
-```
-get_patents(from, to)
-```
+    get_patents(from, to)
 </dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
  
-  ### Parameters
+  <dt> Parameters </dt>
   <dd>
     <ul><li> abc
   </dd>
 
-  ### Returns
+  <dt> Returns </dt>
   <dd>
     <ul><li> abc
   </dd>
@@ -107,20 +97,18 @@ get_patents(from, to)
 <dl><dd><dl><dd><dl> 
 <dt>
 
-```
-get_patents(from, to)
-```
+    get_patents(from, to)
 </dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
  
-  ### Parameters
+  <dt> Parameters </dt>
   <dd>
     <ul><li> abc
   </dd>
 
-  ### Returns
+  <dt> Returns </dt>
   <dd>
     <ul><li> abc
   </dd>
