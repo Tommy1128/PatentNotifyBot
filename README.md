@@ -2,7 +2,9 @@
 
 <dl><dd><dl><dd><dl> 
 
-    get_patents(from, to = today(), limit = 50)
+``` python
+    get_patents(date_from, date_to = today(), limit = 50)
+```
 <dd><dl><dd><dl><dd> 
     <blockquote>
     Retrieve patents within a specified date range.
@@ -10,14 +12,14 @@
     <dl>
         <dt> Parameters </dt>
         <dd><ul>
-            <li><b>date_from</b> (<em style="color:#ee4c2c">date</em>) :&ensp; Starting date.
+            <li><b>date_from</b> (date) :&ensp; Starting date.
             <li><b>date_to</b> (date, opt) :&ensp; Ending date. Default is the current day.
             <li><b>limit</b> (int, opt) :&ensp; Limit the amount of data retrieved at one time. Pass 0 if no limit is desired.
         </dd>
         <dt> Returns </dt>
         <dd><ul>
             <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given date range.
-            <li><b>data</b> (dict[&nbsp;]):&ensp; Each data consists of "title", "date", "url", "image_url", and "content".
+            <li><b>data</b> (dict[ ]):&ensp; Each data consists of "title", "date", "url", "image_url", and "content".
         </dd>
     </dl>
 </dd></dl></dd></dl></dd>
