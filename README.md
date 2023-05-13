@@ -57,7 +57,7 @@
         <dt> Returns </dt>
         <dd><ul>
             <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given date range.
-            <li><b>data</b> [Patent](#patent):&ensp; A generator. Each data consists of "id", "title", "date", "url", "image_url", and "content".
+            <li><b>data</b> (<a href="#patent">Patent</a>[ ]):&ensp; A generator. Each data consists of "id", "title", "date", "url", "image_url", and "content".
         </dd>
     </dl>
 </dd></dl></dd></dl></dd>
