@@ -37,7 +37,7 @@
     </blockquote>
     <dl>
         <dt> Methods </dt>
-        <dd><dl>
+        <dd><dl><dd><dl>
         
 ``` py
     get_patents(*, date_from, date_to = today(), IPC = ..., limit = 50)
@@ -61,30 +61,7 @@
         </dd>
     </dl>
 </dd></dl></dd></dl></dd>
-        </dl></dd>
-    </dl>
-</dd></dl></dd></dl></dd>
-
-``` py
-    get_patents(*, date_from, date_to = today(), IPC = ..., limit = 50)
-```
-<dd><dl><dd><dl><dd> 
-    <blockquote>
-    Retrieve patents within a specified date range. This returns an int and a generator of dictionary.
-    </blockquote>
-    <dl>
-        <dt> Parameters </dt>
-        <dd><ul>
-            <li><b>date_from</b> (date) :&ensp; Starting date.
-            <li><b>date_to</b> (date, opt) :&ensp; Ending date. Default is the current day.
-            <li><b>IPC</b> (str[ ], opt) :&ensp; The IPC of the patents.
-            <li><b>limit</b> (int, opt) :&ensp; Limit the maximum amount of data retrieved. Pass 0 if no limit is desired.
-        </dd>
-        <dt> Returns </dt>
-        <dd><ul>
-            <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given date range.
-            <li><b>data</b> (dict[ ]):&ensp; A generator. Each data consists of "id", "title", "date", "url", "image_url", and "content".
-        </dd>
+        </dl></dd></dl></dd>
     </dl>
 </dd></dl></dd></dl></dd>
 </dl></dd></dl></dd></dl>
