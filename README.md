@@ -3,10 +3,8 @@
 > abc
 
 <dl><dd><dl><dd><dl> 
-<dt>
 
     get_patents(from, to)
-</dt>
 <dd><dl><dd><dl><dd> 
   取得指定日期範圍內的專利
   <dl>
@@ -26,10 +24,8 @@
 # Database
 
 <dl><dd><dl><dd><dl> 
-<dt>
 
     get_patents(from, to)
-</dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
@@ -50,10 +46,8 @@
 # NLP
 
 <dl><dd><dl><dd><dl> 
-<dt>
 
     get_patents(from, to)
-</dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
@@ -71,10 +65,8 @@
 </dd></dl></dd></dl></dd>
 
 ---
-<dt>
 
     get_patents(from, to)
-</dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
@@ -95,10 +87,8 @@
 # Line Bot
 
 <dl><dd><dl><dd><dl> 
-<dt>
 
     get_patents(from, to)
-</dt>
 <dd><dl><dd><dl><dd> 
   get patents  
   <dl>
