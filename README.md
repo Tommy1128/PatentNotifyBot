@@ -3,10 +3,9 @@
 <dl><dd><dl><dd><dl> 
 
 ### Patent
-CLASS `Patent()`{:.py}
 
 ``` py
-    CLASS Patent(pid, title, date, IPC, image_url, content)
+    CLASS Patent(pid, title, date, ipc, image_url, content)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
@@ -18,7 +17,7 @@ CLASS `Patent()`{:.py}
             <li><b>pid</b> (str) :&ensp; Publication number.
             <li><b>title</b> (str) :&ensp; Title.
             <li><b>date</b> (str) :&ensp; Publication date.
-            <li><b>IPC</b> (str[ ]) :&ensp; IPC.
+            <li><b>ipc</b> (str[ ]) :&ensp; IPC.
             <li><b>image_url</b> (str) :&ensp; Url of the main image.
             <li><b>content</b> (str) :&ensp; Abstract of the patent.
         </dd>
@@ -26,6 +25,45 @@ CLASS `Patent()`{:.py}
 </dd></dl></dd></dl></dd>
 
 ---
+
+### Web
+
+``` py
+    CLASS Web()
+```
+<dd><dl><dd><dl><dd> 
+    <blockquote>
+    ...
+    </blockquote>
+    <dl>
+        <dt> Methods </dt>
+        <dd><dl>
+        
+``` py
+    get_patents(*, date_from, date_to = today(), IPC = ..., limit = 50)
+```
+<dd><dl><dd><dl><dd> 
+    <blockquote>
+    Retrieve patents within a specified date range. This returns an int and a generator of dictionary.
+    </blockquote>
+    <dl>
+        <dt> Parameters </dt>
+        <dd><ul>
+            <li><b>date_from</b> (date) :&ensp; Starting date.
+            <li><b>date_to</b> (date, opt) :&ensp; Ending date. Default is the current day.
+            <li><b>IPC</b> (str[ ], opt) :&ensp; The IPC of the patents.
+            <li><b>limit</b> (int, opt) :&ensp; Limit the maximum amount of data retrieved. Pass 0 if no limit is desired.
+        </dd>
+        <dt> Returns </dt>
+        <dd><ul>
+            <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given date range.
+            <li><b>data</b> (dict[ ]):&ensp; A generator. Each data consists of "id", "title", "date", "url", "image_url", and "content".
+        </dd>
+    </dl>
+</dd></dl></dd></dl></dd>
+        </dl></dd>
+    </dl>
+</dd></dl></dd></dl></dd>
 
 ``` py
     get_patents(*, date_from, date_to = today(), IPC = ..., limit = 50)
