@@ -10,7 +10,7 @@
     <dl>
         <dt> Parameters </dt>
         <dd><ul>
-            <li><b>date_from</b> (date) :&ensp; Starting date.
+            <li><b>date_from</b> (<em style="color:#ee4c2c">date</em>) :&ensp; Starting date.
             <li><b>date_to</b> (date, opt) :&ensp; Ending date. Default is the current day.
             <li><b>limit</b> (int, opt) :&ensp; Limit the amount of data retrieved at one time. Pass 0 if no limit is desired.
         </dd>
