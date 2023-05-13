@@ -26,42 +26,26 @@
 
 ---
 
-### Web
-
 ``` py
-    CLASS Web()
+    get_patents(date_from, date_to = today(), ipc = ..., limit = 50)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
-    ...
-    </blockquote>
-    <dl>
-        <dt> Methods </dt>
-        <dd><dl><dd><dl>
-        
-``` py
-    get_patents(*, date_from, date_to = today(), IPC = ..., limit = 50)
-```
-<dd><dl><dd><dl><dd> 
-    <blockquote>
-    Retrieve patents within a specified date range. This returns an int and a generator of dictionary.
+    Retrieve patents within a specified date range and categories. This returns an int and a generator of dictionary.
     </blockquote>
     <dl>
         <dt> Parameters </dt>
         <dd><ul>
             <li><b>date_from</b> (date) :&ensp; Starting date.
             <li><b>date_to</b> (date, opt) :&ensp; Ending date. Default is the current day.
-            <li><b>IPC</b> (str[ ], opt) :&ensp; The IPC of the patents.
+            <li><b>ipc</b> (str[ ], opt) :&ensp; The IPC of the patents.
             <li><b>limit</b> (int, opt) :&ensp; Limit the maximum amount of data retrieved. Pass 0 if no limit is desired.
         </dd>
         <dt> Returns </dt>
         <dd><ul>
-            <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given date range.
-            <li><b>data</b> (<a href="#patent">Patent</a>[ ]):&ensp; A generator. Each data consists of "id", "title", "date", "url", "image_url", and "content".
+            <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given conditions.
+            <li><b>data</b> (<a href="#patent">Patent</a>[ ]) :&ensp; A generator of matching patents.
         </dd>
-    </dl>
-</dd></dl></dd></dl></dd>
-        </dl></dd></dl></dd>
     </dl>
 </dd></dl></dd></dl></dd>
 </dl></dd></dl></dd></dl>
@@ -72,21 +56,75 @@
 <dl><dd><dl><dd><dl> 
 
 ``` py
-    get_patents(date_from, date_to = today(), limit = 50)
+    get_patents(date_from, date_to = today(), ipc = ..., limit = 50)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
-    Retrieve patents within a specified date range.
+    Retrieve patents within a specified date range. 
     </blockquote>
     <dl>
         <dt> Parameters </dt>
         <dd><ul>
-            <li> date_from (date) :&ensp; Starting date
-            <li> date_to (date, opt) :&ensp; End date
+            <li><b>date_from</b> (date) :&ensp; Starting date.
+            <li><b>date_to</b> (date, opt) :&ensp; Ending date. Default is the current day.
+            <li><b>ipc</b> (str[ ], opt) :&ensp; The IPC of the patents.
+            <li><b>limit</b> (int, opt) :&ensp; Limit the maximum amount of data retrieved. Pass 0 if no limit is desired.
         </dd>
         <dt> Returns </dt>
-        <dd>
-            <ul><li> abc
+        <dd><ul>
+            <li><b>total_num</b> (int) :&ensp; The total number of data that matches the given date range.
+            <li><b>data</b> (<a href="#patent">Patent</a>[ ]) :&ensp; A list of matching patents.
+        </dd>
+    </dl>
+</dd></dl></dd></dl></dd>
+
+---
+
+``` py
+    add_patents(patents)
+```
+<dd><dl><dd><dl><dd> 
+    <blockquote>
+    Insert patents into database. Overwrite existing data.
+    </blockquote>
+    <dl>
+        <dt> Parameters </dt>
+        <dd><ul>
+            <li><b>patents</b> (<a href="#patent">Patent</a>[ ]) :&ensp; Patents to be added.
+        </dd>
+    </dl>
+</dd></dl></dd></dl></dd>
+
+---
+
+``` py
+    get_users()
+```
+<dd><dl><dd><dl><dd> 
+    <blockquote>
+    Get all users' info. This is a generator.
+    </blockquote>
+    <dl>
+        <dt> Returns </dt>
+        <dd><ul>
+            <li><b>users</b> ([(str, str[ ])]) :&ensp; Each user contains "id" and "preferences".
+        </dd>
+    </dl>
+</dd></dl></dd></dl></dd>
+
+---
+
+``` py
+    add_users(users)
+```
+<dd><dl><dd><dl><dd> 
+    <blockquote>
+    Insert users into database. Overwrite existing data.
+    </blockquote>
+    <dl>
+        <dt> Parameters </dt>
+        <dd><ul>
+            <li><b>users</b> ([(str, str[ ])]) :&ensp; Users to be added.
         </dd>
     </dl>
 </dd></dl></dd></dl></dd>
@@ -120,18 +158,12 @@
 
 <dl><dd><dl><dd><dl> 
 
-    get_patents(from, to)
+``` py
+    Notify_all_users()
+```
 <dd><dl><dd><dl><dd> 
-    取得指定日期範圍內的專利
-    <dl>
-        <dt> Parameters </dt>
-        <dd>
-            <ul><li> abc
-        </dd>
-        <dt> Returns </dt>
-        <dd>
-            <ul><li> abc
-        </dd>
-    </dl>
+    <blockquote>
+    Boardcast the newly announced patents to all users. Will prioritize displaying patents that are most relevant to each user's interests.
+    </blockquote>
 </dd></dl></dd></dl></dd>
 </dl></dd></dl></dd></dl>
