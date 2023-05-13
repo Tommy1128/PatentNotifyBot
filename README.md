@@ -3,8 +3,6 @@
 > abc
 
 <dl><dd><dl><dd><dl> 
-
----
 <dt>
 
 ```
@@ -12,10 +10,10 @@ get_patents(from, to)
 ```
 </dt>
 <dd><dl><dd><dl><dd> 
-  get patents  
+  取得指定日期範圍內的專利
   <dl>
  
-  ### Parameters
+  <dt> Parameters</dt>
   <dd>
     <ul><li> abc
   </dd>
@@ -32,8 +30,6 @@ get_patents(from, to)
 # Database
 
 <dl><dd><dl><dd><dl> 
-
----
 <dt>
 
 ```
@@ -60,8 +56,6 @@ get_patents(from, to)
 # NLP
 
 <dl><dd><dl><dd><dl> 
-
----
 <dt>
 
 ```
@@ -111,8 +105,6 @@ get_patents(from, to)
 # Line Bot
 
 <dl><dd><dl><dd><dl> 
-
----
 <dt>
 
 ```
