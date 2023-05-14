@@ -32,6 +32,7 @@ MAIN_IMG        = '/html/body/form/div[1]/div/table/tbody/tr/td[3]/table/tbody/t
 CONTENT         = '/html/body/form/div[1]/div/table/tbody/tr/td[3]/table/tbody/tr[4]/td/table/tbody/tr[{}]/td[6]/div'
 CONTENT_FOLDED  = '//*[@id="rmjs-{}"]'
 
+
 @dataclass
 class Patent:
     pid: str
@@ -92,24 +93,27 @@ def get_patents(date_from: datetime.date, date_to: datetime.date = None, ipc = .
     if not ele or ele.get_attribute("class") == "msgfmt": return 0, []
     
     total_num = int(Q(RESULT_NUM).text.replace(',', ''))
-    data = []
-    per = 50
-    for i in range(min(total_num, limit) if limit > 0 else total_num):
-        index = i % per + 2
-        data.append(Patent(
-            pid         = Q(PUB_NUMBER.format(index)).text,
-            url         = Q(PUB_NUMBER.format(index)).get_attribute("href"),
-            title       = Q(TITLE).text,
-            date        = Q(PUB_DATE.format(index)).text,
-            ipc         = Q(IPC.format(index)).text,
-            image_url   = Q(MAIN_IMG.format(index)).get_attribute("src"),
-            content     = Q(CONTENT_FOLDED.format(index-1), CONTENT.format(index)).text,
-        ))
+    def patent_gen():     
+        try:   
+            per = 50
+            for i in range(min(total_num, limit) if limit > 0 else total_num):
+                index = i % per + 2
+                yield Patent(
+                    pid         = Q(PUB_NUMBER.format(index)).text,
+                    url         = Q(PUB_NUMBER.format(index)).get_attribute("href"),
+                    title       = Q(TITLE).text,
+                    date        = Q(PUB_DATE.format(index)).text,
+                    ipc         = Q(IPC.format(index)).text,
+                    image_url   = Q(MAIN_IMG.format(index)).get_attribute("src"),
+                    content     = Q(CONTENT_FOLDED.format(index-1), CONTENT.format(index)).text,
+                )
 
-        if index == per + 1:
-            try:
-                Q(NEXT_PAGE).click()
-            except NoSuchElementException:
-                break
-    C(SEARCH_EXIT)
-    return total_num, data
+                if index == per + 1:
+                    try:
+                        Q(NEXT_PAGE).click()
+                    except NoSuchElementException:
+                        return
+        finally:
+            C(SEARCH_EXIT)
+
+    return total_num, patent_gen
