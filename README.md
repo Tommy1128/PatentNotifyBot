@@ -5,7 +5,7 @@
 ### Patent
 
 ``` py
-    CLASS Patent(pid, title, date, ipc, image_url, content)
+    CLASS Patent(pid, url, title, date, ipc, image_url, content)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
@@ -15,6 +15,7 @@
         <dt> Attributes </dt>
         <dd><ul>
             <li><b>pid</b> (str) :&ensp; Publication number.
+            <li><b>url</b> (str) :&ensp; Url of this page.
             <li><b>title</b> (str) :&ensp; Title.
             <li><b>date</b> (str) :&ensp; Publication date.
             <li><b>ipc</b> (str[ ]) :&ensp; IPC.
@@ -27,7 +28,7 @@
 ---
 
 ``` py
-    get_patents(date_from, date_to = today(), ipc = ..., limit = 50)
+    get_patents(date_from, date_to = ..., ipc = ..., limit = 50)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
@@ -56,7 +57,7 @@
 <dl><dd><dl><dd><dl> 
 
 ``` py
-    get_patents(date_from, date_to = today(), ipc = ..., limit = 50)
+    get_patents(date_from, date_to = ..., ipc = ..., limit = 50)
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
@@ -159,7 +160,7 @@
 <dl><dd><dl><dd><dl> 
 
 ``` py
-    Notify_all_users()
+    notify_all_users()
 ```
 <dd><dl><dd><dl><dd> 
     <blockquote>
