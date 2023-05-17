@@ -43,6 +43,17 @@ class Patent:
     image_url: str
     content: str
 
+    def __dict__(self):
+        return {
+            "pid": self.pid, 
+            "url": self.url,
+            "title": self.title,
+            "date": self.date,
+            "ipc": self.ipc,
+            "image_url": self.image_url,
+            "content": self.content,
+        }
+
 
 options = EdgeOptions() 
 options.add_argument('log-level=3')
@@ -73,8 +84,9 @@ for index in SETTING_INDEX:
 action.click(Q(SETTING_DISPLAY)).click(Q(SETTING_APPLY)).perform()
 C(SETTING_EXIT)
 
-def get_search_token():
-    raise NotImplementedError()
+def get_search_token(date_from, date_to, ipc):
+    return "ID=20230401:"
+    # raise NotImplementedError()
 
 
 #================================================================================================
@@ -101,7 +113,7 @@ def get_patents(date_from: datetime.date, date_to: datetime.date = None, ipc = .
                 yield Patent(
                     pid         = Q(PUB_NUMBER.format(index)).text,
                     url         = Q(PUB_NUMBER.format(index)).get_attribute("href"),
-                    title       = Q(TITLE).text,
+                    title       = Q(TITLE.format(index)).text,
                     date        = Q(PUB_DATE.format(index)).text,
                     ipc         = Q(IPC.format(index)).text,
                     image_url   = Q(MAIN_IMG.format(index)).get_attribute("src"),
@@ -116,4 +128,4 @@ def get_patents(date_from: datetime.date, date_to: datetime.date = None, ipc = .
         finally:
             C(SEARCH_EXIT)
 
-    return total_num, patent_gen
+    return total_num, patent_gen()
