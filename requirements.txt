@@ -1,1 +1,4 @@
-1
+random
+flask
+linebot
+pickle
