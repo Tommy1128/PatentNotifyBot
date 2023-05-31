@@ -10,8 +10,8 @@ import pickle
 
 cache = {"path": "cache.pickle", "range": 0, "step": {}}
 app = Flask(__name__)  
-line_bot_api = LineBotApi(g6eBaZvsIk9YB4w1duTzXn/7B64DtDKlqAZNF9i07mTScudoeyY9/UGP2woS5Vlljl20xXveiFIRFXk9lE87dcxRuApQJMtajMw/yQw/6+0hVkkJRWWvAasz7gNI2GcJAaeJGlpERIbjb0bXrJpD5AdB04t89/1O/w1cDnyilFU=)  
-handler = WebhookHandler(6903abfb0de2d97cfc3eee73cb60bd58)
+line_bot_api = LineBotApi('g6eBaZvsIk9YB4w1duTzXn/7B64DtDKlqAZNF9i07mTScudoeyY9/UGP2woS5Vlljl20xXveiFIRFXk9lE87dcxRuApQJMtajMw/yQw/6+0hVkkJRWWvAasz7gNI2GcJAaeJGlpERIbjb0bXrJpD5AdB04t89/1O/w1cDnyilFU=')  
+handler = WebhookHandler('6903abfb0de2d97cfc3eee73cb60bd58')
 
 def get_recent(days: int):
     if cache["range"] < days:
